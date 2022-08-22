@@ -1,1 +1,1 @@
-# terraform-aws-estate
+# terraform-aws-org-structure
