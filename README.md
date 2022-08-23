@@ -1,4 +1,4 @@
-# terraform-aws-estate
+# terraform-aws-org-structure
 
 ## Requirements
 
@@ -26,15 +26,14 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| availability\_zones | [Optional] A list of Availability zones to operate in. | `list(string)` | <pre>[<br>  "a",<br>  "b",<br>  "c"<br>]</pre> | no |
-| enable\_private\_internet\_access | [Optional] Should non-public instance be able to access the Internet via a NAT instance. | `bool` | `true` | no |
-| name | [Optional] The root name for the Project. | `string` | `"Awesome Project!"` | no |
-| network\_bits | [Optional] The number of network bits to be allocated | `number` | `8` | no |
-| network\_cidr\_range | [Optional] The Primary Region to run operations and build within. | `string` | `"10.0.0.0/8"` | no |
-| region | [Required] The Region to run operations and build within. | `string` | `"eu-west-1"` | no |
-| tags | [Optional] Extra Tags to add to your stack. | `map` | <pre>{<br>  "enviroment": "alpha"<br>}</pre> | no |
-| tiers | [Optional] How many uniform tiers to create, use 'public' to create a public tier. | `list(string)` | <pre>[<br>  "public",<br>  "data",<br>  "mid"<br>]</pre> | no |
+| default\_accounts | [Optional] A List of default accounts. | `list(string)` | <pre>[<br>  "logging",<br>  "billing"<br>]</pre> | no |
+| environments | [Required] A List of Environments for each Product. | `string` | <pre>[<br>  "lab",<br>  "dev",<br>  "prod"<br>]</pre> | no |
+| project\_accounts | [Required] A List of Project Accounts to host your Projects. | `list(string)` | <pre>[<br>  "projectx"<br>]</pre> | no |
+| region | [Optional] The Master Region to operate in. | `list(string)` | <pre>[<br>  "projectx"<br>]</pre> | no |
+| tags | [Optional] Extra Tags to add to your stack. | `map` | <pre>{<br>  "BU": "cloud"<br>}</pre> | no |
 
 ## Outputs
 
 No outputs.
+
+For further information on the project consult [http://devsecopz.blogstop.com/]
