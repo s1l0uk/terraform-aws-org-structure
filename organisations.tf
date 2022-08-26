@@ -15,7 +15,19 @@ resource "aws_organizations_account" "project" {
   role_name = "Admin"
 }
 
-module "configure_iam" {
+module "standard_configure_iam" {
+  for_each = aws_organizations_account.standard
+  source = "./modules/"
+  provider "aws" {
+    assume_role {
+      role_arn = "arn:aws:iam::${each.value.id}:role/Admin"
+    }
+    alias  = each.value.id
+    region = var.region
+  }
+}
+
+module "project_configure_iam" {
   for_each = aws_organizations_account.standard
   source = "./modules/"
   provider "aws" {
