@@ -14,12 +14,17 @@
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| project\_configure\_iam | ./modules/ | n/a |
+| standard\_configure\_iam | ./modules/ | n/a |
 
 ## Resources
 
 | Name | Type |
 |------|------|
+| [aws_organizations_account.project](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_account) | resource |
+| [aws_organizations_account.standard](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_account) | resource |
 | [aws_organizations_organization.root](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_organization) | resource |
 
 ## Inputs
@@ -36,4 +41,4 @@ No modules.
 
 No outputs.
 
-For further information on the project consult [http://devsecopz.blogstop.com/]
+For further information on the project consult [http://devsecopz.blogspot.com/]
