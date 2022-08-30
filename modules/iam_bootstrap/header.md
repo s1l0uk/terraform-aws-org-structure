@@ -1,1 +1,1 @@
-# terraform-aws-org-structure
+# terraform-iam-primer
